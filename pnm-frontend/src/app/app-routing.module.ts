@@ -5,13 +5,23 @@ import { MainComponent } from './layouts/main/main.component';
 
 const routes: Routes = [
   {
+    redirectTo: '/welcome',
     path: '',
     pathMatch: 'full',
+  },
+  {
+    path: 'welcome',
     component: LandingComponent
   },
   {
     path: 'skippers',
-    component: MainComponent
+    component: MainComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./skipper/skipper.module').then(m => m.SkipperModule)
+      }
+    ]
   }
 ];
 

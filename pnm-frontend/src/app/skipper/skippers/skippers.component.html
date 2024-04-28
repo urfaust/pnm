@@ -1,0 +1,32 @@
+
+<div class="card" style="margin-top: 50px;">
+    <p-table [value]="skippers" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="caption">
+            <div class="flex align-items-center justify-content-between">
+                Skippers
+                <p-button icon="pi pi-refresh"></p-button>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Name</th>
+                <!-- <th>Image</th> -->
+                <th>Region</th>
+                <th>Email</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-skipper>
+            <tr>
+                <td>{{skipper.attributes.surname}} {{skipper.attributes.name}}</td>
+                <!-- <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + skipper.image" [alt]="skipper.name" width="100" class="shadow-4" /></td> -->
+                <td>{{skipper.attributes.region}}</td>
+                <td>{{skipper.attributes.email}}</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="flex align-items-center justify-content-between">
+                In total there are {{skippers ? skippers.length : 0 }} skippers.
+            </div>
+        </ng-template>
+    </p-table>
+</div>
