@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class LandingComponent {
 
+  constructor() {
+    console.log('Version 0.2.0');
+  }
 }
