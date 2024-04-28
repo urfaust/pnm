@@ -1,0 +1,26 @@
+<p-toolbar> <!--  styleClass="bg-gray-900 shadow-2" [style]="{ 'border-radius': '3rem', 'background-image': 'linear-gradient(to right, var(--bluegray-500), var(--bluegray-800))' }" -->
+    <ng-template pTemplate="start">
+        <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" />
+    </ng-template>
+    <ng-template pTemplate="center">
+        <div class="flex flex-wrap align-items-center gap-3">
+            <!-- <p-toggleButton formControlName="checked" onLabel="Yes" offLabel="No" (click)="sidebarVisible = true"></p-toggleButton> -->
+            <button pButton (click)="sidebarVisible = true" icon="pi pi-bars"></button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="flex align-items-center gap-2" style="margin-right: 20px;">
+            <button (click)="changeTheme('light')" pButton icon="pi pi-sun"></button>
+        </div>
+        <div class="flex align-items-center gap-2">
+            <button (click)="changeTheme('dark')" pButton icon="pi pi-moon"></button>
+        </div>
+    </ng-template>
+</p-toolbar>
+<p-sidebar [(visible)]="sidebarVisible">
+    <h3>Sidebar</h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+</p-sidebar>

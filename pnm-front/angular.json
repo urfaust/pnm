@@ -37,7 +37,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/assets/css/light.scss",
+                "bundleName": "light",
+                "inject": false
+              },
+              {
+                "input": "src/assets/css/dark.scss",
+                "bundleName": "dark",
+                "inject": false  
+              }
             ],
             "scripts": []
           },
