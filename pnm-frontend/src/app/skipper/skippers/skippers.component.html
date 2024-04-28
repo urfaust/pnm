@@ -1,4 +1,3 @@
-
 <div class="card" style="margin-top: 50px;">
     <p-table [value]="skippers" [tableStyle]="{'min-width': '60rem'}">
         <ng-template pTemplate="caption">
@@ -9,9 +8,9 @@
         </ng-template>
         <ng-template pTemplate="header">
             <tr>
-                <th>Name</th>
-                <!-- <th>Image</th> -->
-                <th>Region</th>
+                <th>Όνομα</th>
+                <!-- <th>Εικόνα</th> -->
+                <th>Περιοχή</th>
                 <th>Email</th>
             </tr>
         </ng-template>
@@ -25,7 +24,7 @@
         </ng-template>
         <ng-template pTemplate="summary">
             <div class="flex align-items-center justify-content-between">
-                In total there are {{skippers ? skippers.length : 0 }} skippers.
+                Στο σύνολο βρέθηκαν {{skippers ? skippers.length : 0 }} skippers.
             </div>
         </ng-template>
     </p-table>
