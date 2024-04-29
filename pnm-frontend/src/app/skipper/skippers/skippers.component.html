@@ -17,7 +17,7 @@
         <ng-template pTemplate="body" let-skipper>
             <tr [pSelectableRow]="skipper" (click)="viewProfile($event)">
                 <td><img [src]="skipper.attributes.imageUrl" [alt]="skipper.name" width="150" class="shadow-4" /></td>
-                <td>{{skipper.attributes.surname}} {{skipper.attributes.name}}</td>
+                <td class="text-2xl text-900">{{skipper.attributes.surname}} {{skipper.attributes.name}}</td>
                 <td>{{skipper.attributes.region}}</td>
                 <td>{{skipper.attributes.email}}</td>
             </tr>
