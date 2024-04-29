@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SkipperService } from '../services/skipper.service';
 import { Skipper } from '../interfaces/skipper';
 import { map } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-skippers',
@@ -10,8 +11,12 @@ import { map } from 'rxjs';
 })
 export class SkippersComponent implements OnInit {
   skippers: Skipper[];
+  selectedSkipper!: Skipper;
 
-  constructor(private skipperService: SkipperService) {
+  constructor(
+    private skipperService: SkipperService,
+    private router: Router
+    ) {
     this.skippers = [];
   }
 
@@ -25,5 +30,9 @@ export class SkippersComponent implements OnInit {
     return this.skipperService.getSkippers().pipe(
       map((res: any) => res.data)
     )
+  }
+
+  viewProfile(e: any) {
+    this.router.navigate([`skippers/profile/${this.selectedSkipper.id}`]);
   }
 }

@@ -368,6 +368,7 @@ export interface ApiSkipperSkipper extends Schema.CollectionType {
     singularName: 'skipper';
     pluralName: 'skippers';
     displayName: 'skipper';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -378,6 +379,7 @@ export interface ApiSkipperSkipper extends Schema.CollectionType {
     email: Attribute.Email & Attribute.Required & Attribute.Unique;
     image: Attribute.Media;
     region: Attribute.String;
+    imageUrl: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
