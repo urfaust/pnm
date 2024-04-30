@@ -5,8 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
 import { SidebarModule } from 'primeng/sidebar';
-// import { ToggleButtonModule } from 'primeng/togglebutton';
 import { TableModule } from 'primeng/table';
+import { ImageModule } from 'primeng/image';
 
 @NgModule({
   declarations: [
@@ -18,16 +18,16 @@ import { TableModule } from 'primeng/table';
     ButtonModule,
     ToolbarModule,
     SidebarModule,
-    // ToggleButtonModule,
-    TableModule
+    TableModule,
+    ImageModule
   ],
   exports:[
     HttpClientModule,
     ButtonModule,
     ToolbarModule,
     SidebarModule,
-    // ToggleButtonModule,
-    TableModule
+    TableModule,
+    ImageModule
   ]
 })
 export class SharedModule { }

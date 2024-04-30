@@ -11,5 +11,6 @@ export interface Skipper {
     createdAt: string
     updatedAt: string
     publishedAt: string
+    imageUrl: string;
   }
   

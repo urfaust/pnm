@@ -12,4 +12,8 @@ export class SkipperService {
   getSkippers() {
     return this.http.get(`${this.strapiUrl}/skippers?populate=*`);
   }
+
+  getSkipper(id: number) {
+    return this.http.get(`${this.strapiUrl}/skippers/${id}?populate=*`);
+  }
 }
