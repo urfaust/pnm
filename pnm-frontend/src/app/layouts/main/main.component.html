@@ -19,10 +19,18 @@
     </ng-template>
 </p-toolbar>
 <p-sidebar [(visible)]="sidebarVisible">
-    <h3>Sidebar</h3>
+    <h3>Menu</h3>
+    <hr>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <button 
+            pButton 
+            type="button" 
+            label="Skippers" 
+            class="p-button-link"
+            routerLink="/skippers"
+            (click)="sidebarVisible = false"
+        >
+        </button>
     </p>
 </p-sidebar>
 <router-outlet></router-outlet>

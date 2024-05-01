@@ -19,7 +19,7 @@ import { ImageModule } from 'primeng/image';
     ToolbarModule,
     SidebarModule,
     TableModule,
-    ImageModule
+    ImageModule,
   ],
   exports:[
     HttpClientModule,
@@ -27,7 +27,7 @@ import { ImageModule } from 'primeng/image';
     ToolbarModule,
     SidebarModule,
     TableModule,
-    ImageModule
+    ImageModule,
   ]
 })
 export class SharedModule { }

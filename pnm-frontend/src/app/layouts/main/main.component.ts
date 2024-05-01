@@ -10,7 +10,6 @@ import { ThemeService } from '../../shared/theme.service';
 export class MainComponent implements OnInit {
 
 sidebarVisible: boolean = false;
-// checked: boolean = false;
 
     constructor(
       private themeService: ThemeService
@@ -19,7 +18,6 @@ sidebarVisible: boolean = false;
     }
 
     ngOnInit() {
-        
     }
 
     changeTheme(theme: string) {
